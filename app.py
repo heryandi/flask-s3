@@ -5,7 +5,7 @@ import hmac, hashlib
 from flask import Flask, json, jsonify, render_template, request
 
 AWS_ACCESS_KEY_ID = ""
-AWS_SECRET_ACCESS_KEY = ""
+AWS_ACCESS_KEY = ""
 S3_BUCKET_NAME = ""
 S3_BUCKET_URL = "//" + S3_BUCKET_NAME + ".s3.amazonaws.com" 
 
@@ -28,7 +28,7 @@ def s3signature():
         ]
     }
     policy = base64.b64encode(json.dumps(policy_object).replace("\n", "").replace("\r", ""))
-    signature = base64.b64encode(hmac.new(AWS_SECRET_ACCESS_KEY, policy, hashlib.sha1).digest())
+    signature = base64.b64encode(hmac.new(AWS_ACCESS_KEY, policy, hashlib.sha1).digest())
 
     return jsonify({
         "key": filename,
