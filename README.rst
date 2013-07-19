@@ -27,6 +27,8 @@ Using
 Useful Docs
 ===========
 
+`Amazon: Browser-Based Uploads Using POST <http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingHTTPPOST.html>`_
+
 `Amazon: Browser Uploads to S3 using HTML POST Forms <http://aws.amazon.com/articles/1434>`_
 
 `Amazon: Enabling Cross-Origin Resource Sharing <http://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html>`_
